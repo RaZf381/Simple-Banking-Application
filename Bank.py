@@ -1,5 +1,5 @@
 def check_balance():
-    print("Checkig balance...")
+    print("Checking balance...")
     print(f"Your balance is {balance}")
 
 def deposit(deposit_amount):
@@ -8,8 +8,7 @@ def deposit(deposit_amount):
         print("Depositing money...")
         balance += deposit_amount
     else:
-        print("Can't deposit a negetive or zero amount.")
-
+            print("Can't deposit a negative or zero amount.")
 
 def withdraw(withdraw_amount):
     global balance
@@ -24,18 +23,26 @@ def withdraw(withdraw_amount):
         balance -= withdraw_amount
 
     elif withdraw_amount <= 0:
-        print("Can't withdraw a negetive or zaro amount.")    
+        print("Can't withdraw a negative or zero amount.")    
 
+
+print("===========================")
 print("---Welcome to RaZf Bank---")
+print("===========================")
 
-balance = 100
+
+balance = 0.0
 
 while True:
+    print("===========================")
     print("1. Checking balance")
     print("2. Deposit money")
-    print("3. Withdrwa money")
+    print("3. Withdraw money")
     print("4. Exit")
+    print("===========================")
+
     choice = (input("Enter a choice(1-4): "))
+    print("===========================")
 
 
     if choice == '1':
@@ -45,11 +52,13 @@ while True:
     elif choice == '2':
         deposit_amount = float(input("Enter the deposit amount: "))
         deposit(deposit_amount)
+        print("===========================")
 
 
     elif choice == '3':
         withdraw_amount = float(input("Enter the withdraw amount: "))
         withdraw(withdraw_amount)
+        print("===========================")
 
 
     elif choice == '4':
@@ -57,7 +66,11 @@ while True:
 
 
     else:
+        print("===========================")
         print("Invalid input. Please Re-try.")
+        print("===========================")
 
 
-print("Thank You.")        
+
+print("Thank You.")  
+print("===========================")
